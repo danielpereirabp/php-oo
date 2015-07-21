@@ -1,8 +1,7 @@
 <?php
-	require_once __DIR__ . '/../src/data.php';
+	require_once __DIR__ . '/../data/data.php';
 
 	$key = $_GET['key'];
-	$order = $_GET['order'];
 
 	$cliente = $clientes[$key];
 ?>
@@ -39,8 +38,12 @@
 
 		<p>CPF: <?php echo $cliente->getCpf() ?></p>
 		<p>Sexo: <?php echo $cliente->getSexo() ?></p>
-		<p>Data Nasc.: <?php echo $cliente->getDataNascimento() ?></p>
-		<p>Endereço: <?php echo $cliente->getEndereco() ?></p>
+		<p>Data Nasc.: <?php echo $cliente->getDataNascimento()->format('d/m/Y') ?></p>
+		<p>Endereço: <ul><?php foreach ($cliente->getEndereco() as $endereco):?>
+                    <li><?php echo $endereco;?></li>
+                    <?php endforeach;?>
+                   </ul>
+                </p>
     
 	</div>
 
