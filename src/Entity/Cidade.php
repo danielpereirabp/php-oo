@@ -12,13 +12,13 @@ class Cidade {
 
     /**
      * Estado a qual a cidade pertence
-     * @var App\Entity\Estado 
+     * @var \App\Entity\Estado 
      */
     private $estado;
 
     /**
      * Lista de bairros que tem esta cidade
-     * @var App\Listas\Bairro
+     * @var \App\Listas\Bairro
      */
     private $bairros;
 
@@ -50,7 +50,7 @@ class Cidade {
 
     /**
      * Seta uma lista de bairros
-     * @param \App\Entity\App\Listas\Bairro $bairros
+     * @param \App\Listas\Bairro $bairros
      */
     function setBairros(\App\Listas\Bairro $bairros) {
         $this->bairros = $bairros;
