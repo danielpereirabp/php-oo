@@ -1,9 +1,9 @@
 <?php
 
-namespace App\Entity;
-use \App\Entity\Interfaces\Sexo;
+namespace App\Entity\Sexo;
+use App\Entity\Sexo\SexoInterface;
 
-class Masculino implements Sexo{
+class Masculino implements SexoInterface{
     
     private $sexo;
     

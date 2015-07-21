@@ -6,7 +6,7 @@ class Endereco {
     
     /**
      * Tipo de logradouro
-     * @var \App\Entity\Logradouro 
+     * @var \App\Entity\Logradouros\LogradourosInterface 
      */
     private $logradouro;
     
@@ -56,7 +56,7 @@ class Endereco {
     }
 
 
-    function setLogradouro(\App\Entity\Logradouro $logradouro) {
+    function setLogradouro(\App\Entity\Logradouros\LogradouroInterface $logradouro) {
         $this->logradouro = $logradouro;
     }
 
@@ -76,7 +76,7 @@ class Endereco {
         $this->bairro = $bairro;
     }
     
-    function __construct(\App\Entity\Logradouro $logradouro, $endereco, $numero, $cep, \App\Entity\Bairro $bairro) {
+    function __construct(\App\Entity\Logradouros\LogradourosInterface $logradouro, $endereco, $numero, $cep, \App\Entity\Bairro $bairro) {
         $this->logradouro = $logradouro;
         $this->endereco = $endereco;
         $this->numero = $numero;

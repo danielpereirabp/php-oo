@@ -2,7 +2,7 @@
 namespace App\Entity;
 use \DateTime;
 use App\Listas\Endereco as EnderecoLista;
-use App\Entity\Interfaces\Sexo;
+use App\Entity\Sexo\SexoInterface;
 class Cliente {
 
     private $nome;
@@ -11,7 +11,7 @@ class Cliente {
     private $sexo;
     private $endereco;
 
-    public function __construct($nome, $cpf, DateTime $dataNascimento,Sexo $sexo, Endereco $endereco) {
+    public function __construct($nome, $cpf, DateTime $dataNascimento,SexoInterface $sexo, Endereco $endereco) {
         $this->nome = $nome;
         $this->cpf = $cpf;
         $this->dataNascimento = $dataNascimento;
